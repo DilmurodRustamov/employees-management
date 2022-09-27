@@ -12,7 +12,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import tax.uz.employeesmanagement.security.JwtFilter;
+//import tax.uz.employeesmanagement.security.JwtFilter;
 import tax.uz.employeesmanagement.security.UserDetailsServiceImpl;
 
 @Configuration
@@ -23,7 +23,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final UserDetailsServiceImpl userDetailsServiceImpl;
 
-    private final JwtFilter jwtFilter;
+//    private final JwtFilter jwtFilter;
 
     @Bean
     PasswordEncoder passwordEncoder() {
@@ -52,6 +52,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .anyRequest()
                 .authenticated();
-        http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
+//        http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
     }
 }

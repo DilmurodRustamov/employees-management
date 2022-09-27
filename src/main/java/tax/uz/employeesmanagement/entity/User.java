@@ -32,24 +32,9 @@ public class User extends AbstractEntity {
     @Enumerated(EnumType.STRING)
     private UserRole userRole;
 
+    private String position;
 
-
-//    @ManyToMany(fetch = FetchType.LAZY)
-//    @JsonIgnore
-//    @Column(nullable = false)
-//    @OrderBy(value = "nameUz asc")
-//    @JoinTable(
-//            name = "courier_regions",
-//            joinColumns = @JoinColumn(name = "courier_id"),
-//            inverseJoinColumns = @JoinColumn(name = "region_id"))
-//    private Set<Region> regions= new HashSet<>();
-
-    public User(String name, String phoneNumber, String password, UserRole userRole) {
-        this.name = name;
-        this.phoneNumber = phoneNumber;
-        this.password = password;
-        this.userRole = userRole;
-    }
+    private double salary;
 
     public static User initializeUserWithUserRole(String phoneNumber) {
         User user = new User();

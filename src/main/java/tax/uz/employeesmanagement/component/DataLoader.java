@@ -19,7 +19,7 @@ public class DataLoader implements CommandLineRunner {
 
 //    private final RoleRepository roleRepository;
 
-    private final PasswordEncoder passwordEncoder;
+//    private final PasswordEncoder passwordEncoder;
 
     @Value("${spring.sql.init.mode}")
     private String initMode;
@@ -31,14 +31,16 @@ public class DataLoader implements CommandLineRunner {
             superAdmin.setName("Super Admin");
             superAdmin.setPhoneNumber("998912345678");
             superAdmin.setUserRole(UserRole.SUPER_ADMIN);
-            superAdmin.setPassword(passwordEncoder.encode("123456"));
+//            superAdmin.setPassword(passwordEncoder.encode("123456"));
+            superAdmin.setPassword("123456");
             userRepository.save(superAdmin);
 
             User admin = new User();
             admin.setName("Admin");
             admin.setPhoneNumber("998912345679");
             admin.setUserRole(UserRole.ADMIN);
-            admin.setPassword(passwordEncoder.encode("123456"));
+//            admin.setPassword(passwordEncoder.encode("123456"));
+            admin.setPassword("123456");
             userRepository.save(admin);
         }
     }
