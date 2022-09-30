@@ -1,4 +1,4 @@
-package tax.uz.employeesmanagement.apiResponsdeMessages;
+package tax.uz.employeesmanagement.apiResponseMessages;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

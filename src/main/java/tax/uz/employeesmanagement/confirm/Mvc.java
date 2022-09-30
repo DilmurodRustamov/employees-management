@@ -5,6 +5,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.CacheControl;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import java.util.concurrent.TimeUnit;
@@ -21,4 +22,5 @@ public class Mvc implements WebMvcConfigurer {
                 .addResourceLocations("classpath:static/", "classpath:/", "file:pictures/")
                 .setCacheControl(CacheControl.maxAge(30, TimeUnit.DAYS));
     }
+
 }

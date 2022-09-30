@@ -36,6 +36,13 @@ public class User extends AbstractEntity {
 
     private double salary;
 
+    public User(String name, String phoneNumber, String password, UserRole userRole) {
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+        this.password = password;
+        this.userRole = userRole;
+    }
+
     public static User initializeUserWithUserRole(String phoneNumber) {
         User user = new User();
         user.setPhoneNumber(phoneNumber);

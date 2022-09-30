@@ -16,7 +16,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) {
-        return new SecurityUser(userRepository.findByPhoneNumber(username).orElseThrow(()->new UsernameNotFoundException(username)));
+        return new SecurityUser(userRepository.findByPhoneNumber(username).orElseThrow(() -> new UsernameNotFoundException(username)));
     }
 
 }

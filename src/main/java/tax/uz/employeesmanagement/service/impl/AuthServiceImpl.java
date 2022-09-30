@@ -1,24 +1,23 @@
 package tax.uz.employeesmanagement.service.impl;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.jpa.datatables.mapping.DataTablesInput;
-import org.springframework.data.jpa.datatables.mapping.DataTablesOutput;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import tax.uz.employeesmanagement.apiResponsdeMessages.ApiResponse;
+import tax.uz.employeesmanagement.apiResponseMessages.ApiResponse;
 import tax.uz.employeesmanagement.dto.LoginDto;
 import tax.uz.employeesmanagement.dto.RegisterDto;
 import tax.uz.employeesmanagement.entity.User;
 import tax.uz.employeesmanagement.ref.UserRole;
 import tax.uz.employeesmanagement.repository.UserRepository;
+
 import tax.uz.employeesmanagement.security.JwtProvider;
 import tax.uz.employeesmanagement.security.SecurityUser;
 import tax.uz.employeesmanagement.service.AuthService;
 
-import static tax.uz.employeesmanagement.apiResponsdeMessages.ResponseMessageKeys.*;
+import static tax.uz.employeesmanagement.apiResponseMessages.ResponseMessageKeys.*;
 
 @Service
 @RequiredArgsConstructor
